@@ -12,3 +12,5 @@ Save your datasets in `datasets`. See examples in there for formatting. `dataset
 Train by running `./train_model.py datasets/DATASET STEPS`, where STEPS is the number of generations to run, divided by 1000. For example, passing 10 will run 10k generations.
 
 Run your trained model with `./run_model.py MODEL_NAME "PROMPT"` where MODEL_NAME is the directory under `checkpoint` of the model you would like to use. PROMPT is an optional string that gives the model a prompt of what to write about.
+
+If you have multiple datasets, prepend your start dataset flag to PROMPT and add a "end dataset" flag to the command. For example, this is a command run for r6_op_bios: `./run_model.py r6_op_bios-355M "<START DATASET> Ryan Slater is an American infantryman" "<END DATASET>"`
